@@ -3,8 +3,8 @@ import fetch from "node-fetch";
 
 // Basic config — edit these
 const title = "🌅 Sunrise Signal";
-const engPrompt = "Drop a ✨ and tell us one good thing from today.";
-const zhPrompt  = "来个✨，分享你今天的一件小确幸～";
+const engPrompt = "Drop a 🌞 and tell us one good thing from today.";
+const zhPrompt  = "来个🌞，分享你今天的一件小确幸～";
 const nextStreamLabel = "Next live";
 const nextStreamISO   = process.env.NEXT_STREAM_ISO || ""; // e.g. "2025-09-02T13:00:00Z"
 const channelLink     = "https://discord.com/api/webhooks/1410758961254105188/zRVtsvYQAFlaTncnkfbxtU4m_3s7uvg5TSWnsFeZ61zG7BSOSMnQsTi84v_1sQo_Z9gF"; // optional
