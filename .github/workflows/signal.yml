@@ -25,6 +25,6 @@ jobs:
         env:
           WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
           NEXT_STREAM_ISO: "2025-09-02T13:00:00Z"   # update anytime
-          BANNER_URL: "https://example.com/banner.jpg"
-          THUMBNAIL_URL: "https://example.com/thumb.png"
+          BANNER_URL: "https://cdn.discordapp.com/attachments/1409312492961927339/1410778813993975850/SunRise.gif?ex=68b241a8&is=68b0f028&hm=6d2fe2f048e4d4169caa3b3bb82c7804414ff953bcd122cdd036fada9d3130fd&"
+          THUMBNAIL_URL: "https://cdn.discordapp.com/attachments/1409312492961927339/1410776459831672938/Untitled_design_1.gif?ex=68b23f76&is=68b0edf6&hm=1a990cdde5a495a807e7b112f65350b3b2e3212143dfbacfa34063ea5446adb5&"
         run: node send.js
