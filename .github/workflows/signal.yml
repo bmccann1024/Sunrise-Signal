@@ -1,0 +1,30 @@
+name: Sunrise Signal
+
+on:
+  schedule:
+    # CRON is UTC. Example: 13:00 UTC = 9:00 AM Detroit (EDT).
+    - cron: "0 13 * * *"
+  workflow_dispatch: {}
+
+jobs:
+  post:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+
+      - name: Install deps
+        run: npm install node-fetch@3
+
+      - name: Send Sunrise Signal
+        env:
+          WEBHOOK_URL: ${{ secrets.WEBHOOK_URL }}
+          NEXT_STREAM_ISO: "2025-09-02T13:00:00Z"   # update anytime
+          BANNER_URL: "https://example.com/banner.jpg"
+          THUMBNAIL_URL: "https://example.com/thumb.png"
+        run: node send.js
